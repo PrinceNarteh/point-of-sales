@@ -1,4 +1,5 @@
-import { Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import { CreateProductDto } from './dtos/create-product.dto';
 
 @Controller('products')
 export class ProductsController {
@@ -14,8 +15,8 @@ export class ProductsController {
     }
 
     @Post()
-    createProduct() {
-        return "Create Product"
+    createProduct(@Body() createProductDto: CreateProductDto) {
+        return createProductDto
     }
 
     @Patch(":id")
