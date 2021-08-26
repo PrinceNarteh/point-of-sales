@@ -12,7 +12,6 @@ Content-Type: application/json
     "name": "Milo",
     "description": "A tin of milo",
     "price": 10.50,
-    "quantity": 24
 }
 
 ### DELETE Single Product
